@@ -391,7 +391,7 @@ section#about .tag:hover {
     .exp-card-header { margin: -16px -12px 20px -12px; padding: 12px; }
     .exp-company-name { font-size: 1rem; }
     .exp-role-title { font-size: 1.2rem; }
-    .metric-container { gap: 12px; }
+    .metric-container { grid-template-columns: 1fr; gap: 12px; }
     .metric-item { padding: 10px; }
 }
 
