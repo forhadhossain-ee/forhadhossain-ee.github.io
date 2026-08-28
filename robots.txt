@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /backups/
 
-Sitemap: https://www.forhadhossain.com/sitemap.xml
+Sitemap: https://forhadhossain.me/sitemap.xml
