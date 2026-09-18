@@ -560,59 +560,152 @@
     </div>
 </section>
     <!-- ============================================================
-         GALLERY SECTION
-         ============================================================ -->
-    <section id="gallery" class="section--dark" style="padding:80px 0; background:var(--forest);">
-        <div class="container">
-            <div class="section-head" style="text-align:center; margin-bottom:40px;">
-                <p class="eyebrow" style="color:var(--gold);">Moments & Milestones</p>
-                <h2 style="color:var(--on-dark);">Achievement &amp; Gallery</h2>
-                <p style="color:var(--on-dark-muted); max-width:600px; margin:0 auto;">
-                    A collection of professional moments, certifications, and key milestones.
-                </p>
-            </div>
+     GALLERY SECTION
+     ============================================================ -->
+<section id="gallery" class="section--dark" style="padding:80px 0; background:var(--forest);">
+    <div class="container">
 
-            <div class="gallery-preview-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:40px;">
-                <div class="gallery-preview-card" style="border-color:rgba(245,240,232,0.15);">
-                    <img src="assets/gallery/thumb-01.jpg" alt="Certificate Preview" loading="lazy" />
-                    <div class="gallery-label">Certificate</div>
-                </div>
-                <div class="gallery-preview-card" style="border-color:rgba(245,240,232,0.15);">
-                    <img src="assets/gallery/thumb-02.jpg" alt="Event Photo" loading="lazy" />
-                    <div class="gallery-label">Event</div>
-                </div>
-                <div class="gallery-preview-card" style="border-color:rgba(245,240,232,0.15);">
-                    <img src="assets/gallery/thumb-03.jpg" alt="Achievement" loading="lazy" />
-                    <div class="gallery-label">Milestone</div>
-                </div>
-            </div>
+        <div class="section-head" style="text-align:center; margin-bottom:40px;">
+            <p class="eyebrow" style="color:var(--gold);">
+                Professional Milestones
+            </p>
 
-            <div style="text-align:center;">
-                <button onclick="toggleGallery()" class="btn gallery-toggle-btn" style="padding:14px 40px; font-size:var(--t-base); border-radius:var(--r-pill); background:var(--cream); color:var(--forest); cursor:pointer; border:none; font-weight:700; transition:all 0.3s ease; display:inline-flex; align-items:center; gap:10px; position:relative;">
-                    🖼️ Open Gallery
-                    <span style="display:inline-block; transition:transform 0.3s ease; font-size:1.2rem;">→</span>
-                    <span style="position:absolute; top:-8px; right:-8px; background:var(--gold); color:var(--forest); font-size:0.55rem; font-weight:800; padding:2px 8px; border-radius:50px;">10+</span>
-                </button>
-                <p style="color:var(--on-dark-muted); font-size:var(--t-xs); margin-top:8px; opacity:0.7;">
-                    Click to view certificates &amp; moments
-                </p>
-            </div>
+            <h2 style="color:var(--on-dark);">
+                Evidence Beyond the Projects
+            </h2>
 
-            <div id="fullGallery" style="display:none; margin-top:48px; padding-top:48px; border-top:2px solid var(--gold);">
-                <div class="slideshow-container">
-                    <div class="slideshow-wrapper" id="gallerySlideshow"></div>
-                    <button class="slideshow-btn slideshow-btn--prev" onclick="changeSlide(-1)">❮</button>
-                    <button class="slideshow-btn slideshow-btn--next" onclick="changeSlide(1)">❯</button>
-                </div>
-                <div class="slideshow-dots" id="galleryDots"></div>
-                <div style="text-align:center; margin-top:32px;">
-                    <button onclick="toggleGallery()" class="btn" style="padding:12px 32px; border-radius:var(--r-pill); background:transparent; color:var(--on-dark); cursor:pointer; border:1px solid var(--on-dark-muted); font-weight:600; transition:all 0.3s ease;">
-                        ✕ Close Gallery
-                    </button>
-                </div>
-            </div>
+            <p style="color:var(--on-dark-muted); max-width:600px; margin:0 auto;">
+                Certificates, presentations, events, and milestones that document
+                the journey behind the work.
+            </p>
         </div>
-    </section>
+
+        <div class="gallery-preview-grid"
+             style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:40px;">
+
+            <div class="gallery-preview-card"
+                 style="border-color:rgba(245,240,232,0.15);">
+
+                <img
+                    src="assets/gallery/thumb-01.jpg"
+                    alt="Certificate Preview"
+                    loading="lazy"
+                />
+
+                <div class="gallery-label">
+                    Certificate
+                </div>
+            </div>
+
+            <div class="gallery-preview-card"
+                 style="border-color:rgba(245,240,232,0.15);">
+
+                <img
+                    src="assets/gallery/thumb-02.jpg"
+                    alt="Event Photo"
+                    loading="lazy"
+                />
+
+                <div class="gallery-label">
+                    Event
+                </div>
+            </div>
+
+            <div class="gallery-preview-card"
+                 style="border-color:rgba(245,240,232,0.15);">
+
+                <img
+                    src="assets/gallery/thumb-03.jpg"
+                    alt="Achievement"
+                    loading="lazy"
+                />
+
+                <div class="gallery-label">
+                    Milestone
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;">
+
+            <button
+                onclick="toggleGallery()"
+                class="btn gallery-toggle-btn"
+                style="padding:14px 40px; font-size:var(--t-base); border-radius:var(--r-pill); background:var(--cream); color:var(--forest); cursor:pointer; border:none; font-weight:700; transition:all 0.3s ease; display:inline-flex; align-items:center; gap:10px; position:relative;"
+            >
+                🖼️ Open Gallery
+
+                <span
+                    style="display:inline-block; transition:transform 0.3s ease; font-size:1.2rem;"
+                >
+                    →
+                </span>
+
+                <span
+                    style="position:absolute; top:-8px; right:-8px; background:var(--gold); color:var(--forest); font-size:0.55rem; font-weight:800; padding:2px 8px; border-radius:50px;"
+                >
+                    10+
+                </span>
+            </button>
+
+            <p
+                style="color:var(--on-dark-muted); font-size:var(--t-xs); margin-top:8px; opacity:0.7;"
+            >
+                Click to view certificates &amp; moments
+            </p>
+
+        </div>
+
+        <div
+            id="fullGallery"
+            style="display:none; margin-top:48px; padding-top:48px; border-top:2px solid var(--gold);"
+        >
+
+            <div class="slideshow-container">
+
+                <div
+                    class="slideshow-wrapper"
+                    id="gallerySlideshow"
+                ></div>
+
+                <button
+                    class="slideshow-btn slideshow-btn--prev"
+                    onclick="changeSlide(-1)"
+                >
+                    ❮
+                </button>
+
+                <button
+                    class="slideshow-btn slideshow-btn--next"
+                    onclick="changeSlide(1)"
+                >
+                    ❯
+                </button>
+
+            </div>
+
+            <div
+                class="slideshow-dots"
+                id="galleryDots"
+            ></div>
+
+            <div style="text-align:center; margin-top:32px;">
+
+                <button
+                    onclick="toggleGallery()"
+                    class="btn"
+                    style="padding:12px 32px; border-radius:var(--r-pill); background:transparent; color:var(--on-dark); cursor:pointer; border:1px solid var(--on-dark-muted); font-weight:600; transition:all 0.3s ease;"
+                >
+                    ✕ Close Gallery
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
     <!-- ============================================================
          CTA SECTION
