@@ -923,3 +923,342 @@ section#skills {
 .gallery-toggle-btn:hover span:last-child {
     transform: translateX(6px) !important;
 }
+
+/* ============================================================
+   D1 — TYPOGRAPHY + SPACING SYSTEM
+   Purpose:
+   Establish a consistent typographic hierarchy and vertical
+   rhythm across the homepage without changing content,
+   structure, colors, images, links, or JavaScript.
+   ============================================================ */
+
+
+/* ============================================================
+   D1.1 — GLOBAL TYPOGRAPHY SCALE
+   ============================================================ */
+
+:root {
+
+    /* Display / heading scale */
+    --d1-display: clamp(2.75rem, 5.5vw, 3.75rem);
+    --d1-h2: clamp(2rem, 4vw, 3rem);
+    --d1-h3: clamp(1.25rem, 2vw, 1.5rem);
+    --d1-h4: 1.125rem;
+
+    /* Body scale */
+    --d1-body: 1rem;
+    --d1-body-lg: 1.125rem;
+    --d1-body-sm: 0.875rem;
+    --d1-caption: 0.8125rem;
+
+    /* Reading rhythm */
+    --d1-body-leading: 1.7;
+    --d1-heading-leading: 1.15;
+
+    /* Section rhythm */
+    --d1-section-space: clamp(72px, 8vw, 112px);
+    --d1-section-head-space: 40px;
+
+    /* Content rhythm */
+    --d1-heading-gap: 16px;
+    --d1-paragraph-gap: 20px;
+}
+
+
+/* ============================================================
+   D1.2 — BASE TEXT
+   ============================================================ */
+
+body {
+    font-size: var(--d1-body);
+    line-height: var(--d1-body-leading);
+}
+
+
+/* ============================================================
+   D1.3 — HEADING HIERARCHY
+   ============================================================ */
+
+h1 {
+    font-size: var(--d1-display);
+    line-height: var(--d1-heading-leading);
+    letter-spacing: -0.025em;
+}
+
+h2 {
+    font-size: var(--d1-h2);
+    line-height: var(--d1-heading-leading);
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: var(--d1-h3);
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: var(--d1-h4);
+    line-height: 1.35;
+}
+
+
+/* ============================================================
+   D1.4 — PARAGRAPH SYSTEM
+   ============================================================ */
+
+p {
+    line-height: var(--d1-body-leading);
+}
+
+.lead {
+    font-size: var(--d1-body-lg);
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   D1.5 — SECTION TYPOGRAPHY
+   ============================================================ */
+
+.section-head {
+    margin-bottom: var(--d1-section-head-space);
+}
+
+.section-head h2 {
+    margin-bottom: var(--d1-heading-gap);
+}
+
+.section-head > p:last-child {
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   D1.6 — EYEBROW SYSTEM
+   ============================================================ */
+
+.eyebrow {
+    font-size: var(--d1-caption);
+    line-height: 1.4;
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   D1.7 — GLOBAL SECTION RHYTHM
+   ============================================================ */
+
+section {
+    padding-top: var(--d1-section-space);
+    padding-bottom: var(--d1-section-space);
+}
+
+
+/* ============================================================
+   D1.8 — HERO TYPOGRAPHY
+   ============================================================ */
+
+.hero-content h1 {
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.hero-content .lead {
+    max-width: 680px;
+    margin-bottom: 32px;
+}
+
+
+/* ============================================================
+   D1.9 — ABOUT TYPOGRAPHY
+   ============================================================ */
+
+section#about h2 {
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+
+section#about .lead {
+    line-height: 1.75;
+}
+
+section#about p:not(.lead) {
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   D1.10 — EXPERIENCE TYPOGRAPHY
+   ============================================================ */
+
+.exp-company-name {
+    line-height: 1.3;
+}
+
+.exp-role-title {
+    line-height: 1.25;
+}
+
+.exp-section-label {
+    line-height: 1.4;
+}
+
+.metric-text {
+    line-height: 1.55;
+}
+
+.exp-lessons-summary p {
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   D1.11 — EDUCATION TYPOGRAPHY
+   ============================================================ */
+
+.edu-university-name {
+    line-height: 1.2;
+}
+
+.edu-degree-meta {
+    line-height: 1.6;
+}
+
+.focus-text strong {
+    line-height: 1.3;
+}
+
+.focus-text span {
+    line-height: 1.35;
+}
+
+
+/* ============================================================
+   D1.12 — SKILLS TYPOGRAPHY
+   ============================================================ */
+
+.skill-category-card h3 {
+    line-height: 1.3;
+}
+
+.skill-name {
+    line-height: 1.35;
+}
+
+.skill-desc {
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   D1.13 — PROJECT TYPOGRAPHY
+   ============================================================ */
+
+#projects .card h3 {
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+#projects .card p {
+    line-height: 1.65;
+}
+
+#projects .tag {
+    line-height: 1.3;
+}
+
+
+/* ============================================================
+   D1.14 — GALLERY TYPOGRAPHY
+   ============================================================ */
+
+.gallery-preview-card .gallery-label {
+    line-height: 1.35;
+}
+
+
+/* ============================================================
+   D1.15 — CTA TYPOGRAPHY
+   ============================================================ */
+
+#cta h2,
+#cta h3 {
+    line-height: 1.2;
+}
+
+#cta p {
+    line-height: 1.65;
+}
+
+
+/* ============================================================
+   D1.16 — MOBILE TYPOGRAPHY
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    :root {
+        --d1-section-space: 64px;
+        --d1-section-head-space: 32px;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .section-head h2 {
+        line-height: 1.15;
+    }
+
+    .section-head {
+        margin-bottom: var(--d1-section-head-space);
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    :root {
+        --d1-section-space: 56px;
+        --d1-section-head-space: 28px;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    .lead {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .eyebrow {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+    }
+
+    .section-head h2 {
+        line-height: 1.18;
+    }
+}
+
+
+/* ============================================================
+   D1.17 — ACCESSIBLE TEXT FLOW
+   ============================================================ */
+
+p,
+li {
+    overflow-wrap: break-word;
+}
+
+
+/* ============================================================
+   END D1
+   ============================================================ */
