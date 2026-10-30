@@ -259,7 +259,7 @@ header#home {
 }
 .asset-slot:hover img { transform: scale(1.1); }
 .asset-slot:hover {
-    box-shadow: 0 0 35px 10px rgba(78,205,196,0.6);
+    box-shadow: 0 0 35px 10px rgba(197,165,90,0.32);
     transform: scale(1.02);
 }
 @keyframes fadeInUp {
@@ -1262,3 +1262,23 @@ li {
 /* ============================================================
    END D1
    ============================================================ */
+
+
+/* ===== RELEASE 1: PROFESSIONAL ACCESSIBILITY POLISH ===== */
+:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+.nav__burger:focus-visible,
+.log-filters button:focus-visible,
+.dot:focus-visible {
+    outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
