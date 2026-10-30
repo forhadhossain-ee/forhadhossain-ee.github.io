@@ -1282,3 +1282,262 @@ li {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* ============================================================
+   RELEASE 2 — POWER SYSTEMS PORTFOLIO VISUAL IDENTITY
+   A final visual layer that retains all existing page structure.
+   ============================================================ */
+:root {
+    --signal: #d9b76d;
+    --signal-soft: #f1e6c9;
+    --deep-grid: rgba(217,183,109,.12);
+    --surface: #fbfaf6;
+    --surface-alt: #f0f3ed;
+    --ink-strong: #10251a;
+    --shadow-soft: 0 18px 50px rgba(13,43,28,.10);
+    --shadow-lift: 0 24px 60px rgba(13,43,28,.16);
+}
+
+body {
+    background: var(--surface);
+    color: #284237;
+    letter-spacing: -.005em;
+}
+
+.section--paper { background: var(--surface); }
+.section--dark {
+    background-color: var(--forest);
+    background-image:
+        linear-gradient(90deg, transparent 49.9%, var(--deep-grid) 50%, transparent 50.1%),
+        linear-gradient(var(--deep-grid) 1px, transparent 1px);
+    background-size: 72px 72px;
+}
+
+.nav {
+    border-radius: 14px;
+    padding: 10px 12px 10px 20px;
+    background: rgba(9, 34, 22, .87);
+    box-shadow: 0 18px 45px rgba(4,18,11,.22);
+}
+.nav.is-condensed { border-radius: 12px; }
+.nav__link { font-size: .78rem; padding: 9px 11px; }
+.nav__cta { border-radius: 9px; }
+.nav__logo { font-size: .98rem; }
+
+header#home {
+    min-height: min(880px, 100vh);
+    position: relative;
+    overflow: hidden;
+}
+header#home::before,
+header#home::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+header#home::before {
+    width: 620px;
+    height: 620px;
+    right: -210px;
+    top: -120px;
+    border: 1px solid rgba(217,183,109,.25);
+    box-shadow: 0 0 0 70px rgba(217,183,109,.035), 0 0 0 140px rgba(217,183,109,.02);
+}
+header#home::after {
+    width: 230px;
+    height: 230px;
+    left: -90px;
+    bottom: -80px;
+    background: rgba(135,168,120,.10);
+}
+.hero-grid { position: relative; z-index: 1; gap: clamp(48px, 7vw, 92px); }
+.hero-content { max-width: 700px; }
+.hero-content .eyebrow { color: var(--signal); }
+.hero-content h1 {
+    font-size: clamp(3.4rem, 7.5vw, 6.2rem);
+    letter-spacing: -.06em;
+    max-width: 620px;
+}
+.hero-content .lead {
+    max-width: 620px;
+    font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+    color: rgba(245,240,232,.78);
+}
+.hero-btns-container { gap: 12px; }
+.hero-btns-container .btn { border-radius: 8px; }
+
+.hero-credentials {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    padding: 0;
+    margin: 42px 0 0;
+    max-width: 650px;
+    overflow: hidden;
+    background: rgba(245,240,232,.15);
+    border: 1px solid rgba(245,240,232,.12);
+    border-radius: 12px;
+}
+.hero-credentials li {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+    padding: 14px 16px;
+    background: rgba(7,30,18,.38);
+}
+.hero-credentials strong {
+    color: var(--signal);
+    font-family: var(--f-body);
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+.hero-credentials span {
+    color: var(--on-dark);
+    font-size: .85rem;
+    line-height: 1.35;
+}
+
+.hero-photo .asset-slot {
+    width: min(390px, 82vw);
+    height: min(480px, 88vw);
+    border: 1px solid rgba(217,183,109,.66);
+    border-radius: 22px 22px 110px 22px;
+    box-shadow: 22px 22px 0 rgba(217,183,109,.15);
+}
+.hero-photo .asset-slot::after {
+    content: "POWER SYSTEMS / RENEWABLE ENERGY";
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    padding: 8px 12px;
+    color: var(--forest);
+    background: var(--signal);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+.asset-slot:hover { box-shadow: 22px 22px 0 rgba(217,183,109,.15); }
+
+section { position: relative; }
+.section-head {
+    max-width: 760px;
+    margin: 0 0 44px;
+    text-align: left;
+}
+.section-head h2 { color: var(--ink-strong); }
+.section--dark .section-head h2 { color: var(--on-dark); }
+.section-head > p:last-child { color: #60776a; max-width: 630px; }
+.section--dark .section-head > p:last-child { color: var(--on-dark-muted); }
+
+section#about {
+    background: linear-gradient(110deg, var(--surface) 0 68%, var(--surface-alt) 68% 100%);
+}
+.about-grid-layout { gap: clamp(48px, 9vw, 120px); }
+section#about h2 { max-width: 360px; font-size: clamp(2.5rem, 4.5vw, 4.1rem); letter-spacing: -.045em; }
+section#about .lead { font-size: 1.35rem; }
+section#about p:not(.lead) { font-size: 1.04rem; max-width: 740px; }
+#about .tag-row { margin-top: 36px; }
+
+.exp-row {
+    padding: 18px;
+    gap: 48px;
+    border: 1px solid rgba(245,240,232,.1);
+    border-radius: 20px;
+    background: rgba(6,29,17,.48);
+    box-shadow: var(--shadow-soft);
+}
+.exp-image-col img { border-radius: 12px; }
+.exp-card-focused { border-radius: 12px; }
+.metric-item { padding: 14px 0; }
+.metric-num { color: var(--signal); }
+.exp-lessons-summary {
+    max-width: 760px;
+    padding: 24px 28px;
+    border-left: 3px solid var(--signal);
+    background: rgba(245,240,232,.05);
+    border-radius: 0 12px 12px 0;
+}
+
+.edu-main-info {
+    padding: clamp(38px, 6vw, 72px);
+    background: var(--surface);
+    border: 1px solid rgba(13,43,28,.1);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+.edu-university-name { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.edu-mini-card { border-radius: 12px; }
+.edu-mini-card:first-child { background: var(--forest); color: var(--on-dark); }
+.edu-mini-card:first-child h4,
+.edu-mini-card:first-child .cgpa-label-sub { color: var(--on-dark-muted); }
+.edu-mini-card:first-child .cgpa-val { color: var(--signal); }
+
+#skills { background-color: #102d1e; }
+.skills-grid { gap: 18px; }
+.skill-category-card {
+    border: 1px solid rgba(245,240,232,.12);
+    border-radius: 14px;
+    background: rgba(255,255,255,.045);
+    box-shadow: none;
+}
+.skill-category-card h3 { color: var(--signal-soft); }
+.skill-name { color: var(--on-dark); }
+.skill-desc { color: var(--on-dark-muted); }
+.skill-bar-bg { height: 4px; background: rgba(245,240,232,.12); }
+.skill-bar-fill { background: linear-gradient(90deg, var(--sage), var(--signal)); }
+.premium-badge { background: var(--signal); color: var(--forest); }
+
+#projects { background: var(--surface-alt); }
+#projects .section-head { display: flex; max-width: none; justify-content: space-between; align-items: end; gap: 28px; }
+.card-grid { gap: 22px; }
+#projects .card,
+.log-grid .card {
+    border: 1px solid rgba(13,43,28,.12);
+    border-radius: 14px;
+    box-shadow: 0 7px 22px rgba(13,43,28,.05);
+}
+#projects .card:hover,
+.log-grid .card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+    border-color: rgba(197,165,90,.55);
+}
+#projects .asset-slot,
+.log-grid .asset-slot {
+    border-radius: 10px;
+    border: 0;
+}
+#projects .card h3,
+.log-grid .card h3 { color: var(--ink-strong); }
+
+.log-filters { gap: 8px; }
+.log-filters button {
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-weight: 600;
+}
+.log-filters button.is-active {
+    background: var(--forest);
+    color: var(--signal-soft);
+    border-color: var(--forest);
+}
+.log-grid { gap: 18px; }
+.log-grid .card { padding: 18px; }
+
+footer { background-color: #081e12 !important; }
+@media (max-width: 820px) {
+    .hero-credentials { grid-template-columns: 1fr; max-width: 100%; }
+    #projects .section-head { display: block; }
+    #projects .section-head .btn { margin-top: 20px; }
+    .hero-photo .asset-slot { height: min(440px, 110vw); }
+    .exp-row { padding: 12px; }
+}
+@media (max-width: 520px) {
+    .nav { border-radius: 10px; }
+    .hero-content h1 { font-size: clamp(3rem, 15vw, 4.1rem); }
+    section#about { background: var(--surface); }
+    .edu-main-info { padding: 26px 18px; }
+}
