@@ -60,12 +60,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.nav__burger');
     const mobileMenu = document.querySelector('.nav__mobile');
     if (burger && mobileMenu) {
+        burger.setAttribute('aria-expanded', 'false');
         burger.addEventListener('click', function () {
-            mobileMenu.classList.toggle('is-open');
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            burger.setAttribute('aria-expanded', String(isOpen));
         });
         mobileMenu.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', function () {
                 mobileMenu.classList.remove('is-open');
+                burger.setAttribute('aria-expanded', 'false');
             });
         });
     }
@@ -127,9 +130,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const cards = document.querySelectorAll('.log-grid .card');
 
         buttons.forEach(btn => {
+            btn.setAttribute('aria-pressed', String(btn.classList.contains('is-active')));
             btn.addEventListener('click', function () {
-                buttons.forEach(b => b.classList.remove('is-active'));
+                buttons.forEach(b => {
+                    b.classList.remove('is-active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
                 this.classList.add('is-active');
+                this.setAttribute('aria-pressed', 'true');
                 const filter = this.dataset.filter;
                 cards.forEach(card => {
                     card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
@@ -181,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const dot = document.createElement('button');
                 dot.className = 'dot' + (index === 0 ? ' active' : '');
                 dot.setAttribute('data-index', index);
+                dot.setAttribute('aria-label', 'Show gallery image ' + (index + 1));
                 dot.addEventListener('click', function () {
                     goToFadeSlide(parseInt(this.dataset.index));
                 });
@@ -257,5 +266,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.toggleGallery = toggleGallery;
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('is-open')) {
+            mobileMenu.classList.remove('is-open');
+            if (burger) burger.setAttribute('aria-expanded', 'false');
+        }
+    });
 
 });
