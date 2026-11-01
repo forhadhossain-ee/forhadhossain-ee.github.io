@@ -217,12 +217,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function startFadeAutoPlay() {
         if (fadeInterval) clearInterval(fadeInterval);
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         fadeInterval = setInterval(() => {
             const slides = wrapper.querySelectorAll('.slide-item');
             const total = slides.length;
             const nextIndex = (currentIndex + 1) % total;
             goToFadeSlide(nextIndex);
-        }, 2000);
+        }, 4800);
     }
 
     function resetFadeAutoPlay() {
