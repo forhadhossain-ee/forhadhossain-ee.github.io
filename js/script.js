@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('is-open')) {
             mobileMenu.classList.remove('is-open');
-            if (burger) burger.setAttribute('aria-expanded', 'false');
+            if (burger) { burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Open menu'); burger.focus(); }
         }
     });
 
