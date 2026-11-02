@@ -275,4 +275,50 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
+    /* ── PREMIUM MOTION & ACCESSIBILITY ── */
+    if (burger && mobileMenu) {
+        const syncMenuState = function (open) {
+            burger.setAttribute('aria-expanded', String(open));
+            burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        syncMenuState(mobileMenu.classList.contains('is-open'));
+        burger.addEventListener('click', function () {
+            syncMenuState(mobileMenu.classList.contains('is-open'));
+        });
+        document.addEventListener('click', function (event) {
+            if (!mobileMenu.contains(event.target) && !burger.contains(event.target)) {
+                mobileMenu.classList.remove('is-open');
+                syncMenuState(false);
+            }
+        });
+    }
+
+    const motionTargets = document.querySelectorAll(
+        '.skill-category-card, #projects .card, .log-grid .card, .metric-item, .gallery-preview-card, .cta-card'
+    );
+    if (motionTargets.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const motionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('motion-in');
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -28px 0px' });
+
+        motionTargets.forEach((element, index) => {
+            element.classList.add('motion-item');
+            element.style.setProperty('--motion-delay', (index % 4) * 75 + 'ms');
+            motionObserver.observe(element);
+        });
+    }
+
+    /* Pause decorative gallery autoplay when the page is backgrounded. */
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) clearInterval(fadeInterval);
+        else if (wrapper && wrapper.children.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            startFadeAutoPlay();
+        }
+    });
+
 });
