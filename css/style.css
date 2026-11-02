@@ -2169,3 +2169,8 @@ body:has(.log-grid)>section{padding-top:56px}
 .card,.skill-category-card,.gallery-preview-card,.metric-item{will-change:transform}
 :focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:4px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+/* Scroll-triggered micro-motion, progressively enhanced by script.js */
+.motion-item{opacity:0;transform:translate3d(0,18px,0);transition:opacity 650ms cubic-bezier(.2,.7,.2,1),transform 650ms cubic-bezier(.2,.7,.2,1);transition-delay:var(--motion-delay,0ms)}
+.motion-item.motion-in{opacity:1;transform:translate3d(0,0,0)}
+@media(prefers-reduced-motion:reduce){.motion-item{opacity:1;transform:none;transition:none}}
