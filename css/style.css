@@ -2108,3 +2108,50 @@ section#about h2 {
     .hero-role { font-size: 1.12rem; }
     .hero-photo .asset-slot { width: min(280px, 74vw); }
 }
+
+
+/* ===== PHASE 1 VISUAL REVIEW: HERO AND ABOUT COMPOSITION ===== */
+.hero-greeting {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #E2C27B;
+    font-family: var(--f-display);
+    font-size: clamp(.9rem, 1.2vw, 1.08rem);
+    font-weight: 700;
+    letter-spacing: .015em;
+}
+.hero-greeting span { color: rgba(226,194,123,.65); }
+.hero-content h1 { max-width: 820px; }
+.hero-btns-container .btn--on-dark {
+    background: linear-gradient(135deg, #E8C779, #C69B45);
+    color: #102D20;
+    border-color: #E8C779;
+    box-shadow: 0 10px 26px rgba(198,155,69,.2);
+}
+.hero-btns-container .btn--ghost-dark,
+.hero-btns-container .btn--linkedin {
+    border: 1px solid rgba(232,199,121,.8);
+    color: var(--cream);
+    background: rgba(8,35,23,.24);
+}
+.hero-btns-container .btn--on-dark:hover,
+.hero-btns-container .btn--ghost-dark:hover,
+.hero-btns-container .btn--linkedin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.2);
+}
+section#about .about-sticky-header h2 {
+    max-width: 560px;
+    font-size: clamp(2.25rem, 4vw, 3.6rem);
+    line-height: 1.08;
+}
+section#about .about-sticky-header h2 em {
+    color: var(--forest, #1B4332);
+    font-style: italic;
+}
+@media (max-width: 600px) {
+    .hero-greeting { font-size: .82rem; }
+    .hero-btns-container .btn { width: 100%; }
+    section#about .about-sticky-header h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+}
