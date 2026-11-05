@@ -1930,3 +1930,39 @@ footer a:hover { color: var(--signal) !important; }
     .reveal { opacity: 1; transform: none; transition: none; }
     .nav__indicator { transition: none; }
 }
+
+
+/* ===== HOMEPAGE REFINEMENT: HERO + MOBILE NAV ===== */
+.hero-content h1 {
+    text-wrap: balance;
+}
+.hero-content .lead {
+    max-width: 56ch;
+    line-height: 1.72;
+    text-wrap: pretty;
+}
+.hero-btns-container {
+    row-gap: 12px;
+}
+.hero-credentials {
+    margin-top: 36px;
+}
+.nav__mobile {
+    max-height: calc(100svh - 92px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+@media (max-width: 600px) {
+    .nav__burger {
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-content .lead {
+        max-width: 58ch;
+    }
+    .hero-credentials {
+        margin-top: 28px;
+    }
+}
