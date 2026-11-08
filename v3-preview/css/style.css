@@ -291,3 +291,70 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offse
  .hero-foot{margin-top:15px}
 }
 @media(prefers-reduced-motion:reduce){.hero,.archive-hero{scroll-behavior:auto}}
+
+
+/* Brand system v2: forest 60 / cream 30 / gold 10.
+   Sage, white and extra neutral hues are removed as independent color families. */
+:root{
+ --paper:var(--forest);
+ --sage:var(--forest-soft);
+ --sage-pale:var(--cream);
+ --ink:var(--cream);
+ --muted:#e2ddcf;
+ --line:rgba(244,240,229,.22);
+ --white:var(--cream);
+ --gold-ink:#d5bb8b;
+}
+body{background:var(--forest);color:var(--cream)}
+.site-header{background:rgba(18,55,45,.97);border-bottom-color:rgba(244,240,229,.18)}
+.brand-copy,.primary-nav a,.menu-toggle{color:var(--cream)}
+.brand-copy small,.hero-kicker,.hero-foot,.section-index,.about-detail,
+.section-intro,.experience-card p,.project-copy p,.contact-description,
+.footer-note,.back-top,.archive-item p{color:#d8d5c9}
+.primary-nav a:hover,.primary-nav a[aria-current=page],.contact-links a:hover{color:var(--gold-soft)}
+.primary-nav .nav-contact{background:var(--cream);color:var(--forest)}
+.primary-nav .nav-contact:hover{background:var(--gold-soft);color:var(--forest)}
+.menu-toggle{border-color:rgba(244,240,229,.3)}
+.menu-toggle span{background:var(--cream)}
+.hero h1,.section-heading,.about-statement,.project-copy h3,.archive-item h2{color:var(--cream)}
+.hero-lede{color:#e2ddcf}
+.hero-lede strong{color:var(--cream)}
+.hero:after{border-color:rgba(244,240,229,.2);box-shadow:0 0 0 34px rgba(244,240,229,.035),0 0 0 68px rgba(244,240,229,.02)}
+.hero-portrait{background:var(--cream);box-shadow:18px 18px 0 var(--forest-soft)}
+.hero-portrait:before{border-color:rgba(18,55,45,.2)}
+.portrait-caption{color:var(--forest)}
+.button-primary{background:var(--cream);color:var(--forest)}
+.button-primary:hover{background:var(--gold-soft);color:var(--forest)}
+.button-secondary{border-color:var(--cream);color:var(--cream)}
+.button-secondary:hover{background:var(--forest-soft)}
+.inline-link{color:var(--cream);border-bottom-color:var(--gold)}
+.hero-foot span:before{background:var(--gold)}
+.identity-strip,.interest-section,.archive-hero{background:var(--forest)}
+.identity-item .micro,.interest-card .micro,.interest-section .eyebrow,
+.archive-hero .eyebrow{color:var(--gold-soft)}
+.section-index strong,.eyebrow,.tag{color:var(--gold-soft)}
+.education-section,.contact-section{background:var(--cream);color:var(--forest)}
+.education-section .section-heading,.contact-section .contact-title,
+.education-section .section-index,.contact-section .eyebrow,
+.education-section .tag{color:var(--forest)}
+.education-section .section-index strong,.contact-section .eyebrow:before{color:var(--gold)}
+.education-section .education-card p,.education-section .gpa-block span,
+.contact-section .contact-description{color:#5f665d}
+.education-card{border-top-color:rgba(18,55,45,.24)}
+.gpa-block{background:rgba(18,55,45,.06)}
+.gpa-block strong{color:var(--forest)}
+.experience-card,.project-row,.archive-item{border-color:rgba(244,240,229,.22)}
+.interest-grid,.interest-card{border-color:rgba(244,240,229,.2)}
+.interest-card p,.interest-card small,.archive-hero p:last-child{color:#e2ddcf}
+.project-image,.archive-item img{background:var(--cream)}
+.contact-links a{color:var(--forest);border-bottom-color:rgba(18,55,45,.2)}
+.site-footer{color:var(--cream)}
+.facts span{border-color:rgba(244,240,229,.3);color:var(--cream)}
+.evidence-note{background:var(--cream);color:var(--forest)}
+.evidence-note strong{color:var(--forest)}
+.skip-link{background:var(--cream);color:var(--forest)}
+@media(max-width:680px){
+ .primary-nav{background:var(--forest);border-bottom-color:rgba(244,240,229,.2)}
+ .primary-nav a{color:var(--cream);border-bottom-color:rgba(244,240,229,.16)}
+ .hero-portrait{box-shadow:5px 5px 0 var(--forest-soft)}
+}
