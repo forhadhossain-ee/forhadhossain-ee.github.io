@@ -397,3 +397,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   .text-link { font-size: .74rem; }
   .social-inline { gap: 15px; }
 }
+
+/* Inline project visual and graceful no-script behavior */
+.work-image-arduino { display: grid; place-items: center; padding: 18px; color: #355A43; background: #E8ECE4; }
+.arduino-visual { width: 100%; height: 100%; max-height: 420px; }
+.reveal { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(22px); }
+.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; }
+}
