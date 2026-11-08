@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         window.addEventListener('resize', function () {
-            if (window.matchMedia('(min-width: 601px)').matches) {
+            if (window.matchMedia('(min-width: 961px)').matches) {
                 setMobileMenuOpen(false);
             }
         });
