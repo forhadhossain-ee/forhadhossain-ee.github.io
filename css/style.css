@@ -407,3 +407,5 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   .js .reveal { opacity: 1; transform: none; }
 }
+
+.work-status { display: inline-block; margin-top: 16px; color: #8B784D; font: 700 .58rem var(--display); letter-spacing: .12em; }
